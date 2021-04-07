@@ -10,9 +10,6 @@ def test_add_number_one():
     result = add('1')
     assert result == 1
 
-def test_add_number_two():
-    result = add('2')
-    assert result == 2
 
 def test_add_two_numbers():
     result = add('1,2')
