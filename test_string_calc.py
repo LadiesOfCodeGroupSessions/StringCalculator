@@ -1,4 +1,6 @@
 from string_calc import add
+import random
+
 
 
 def test_add_empty_string():
@@ -14,3 +16,7 @@ def test_add_number_one():
 def test_add_two_numbers():
     result = add('1,2')
     assert result == 3
+
+def test_add_three_numbers():
+    result = add('1,3,9')
+    assert result == 13
