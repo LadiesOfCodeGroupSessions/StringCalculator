@@ -21,3 +21,10 @@ def test_add_three_numbers():
     result = add('1,3,9')
     assert result == 13
 
+def test_add_multiple_digit_numbers():
+    result = add('10,100,1000')
+    assert result == 1110
+
+def test_add_numbers_on_new_lines():
+    result = add('1\n2,3')
+    assert result == 6
