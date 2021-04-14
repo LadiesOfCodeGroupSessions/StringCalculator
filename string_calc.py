@@ -1,15 +1,20 @@
 
 
 def add(string):
-    numbers_string = []
-    numbers_list = numbers_string.split()
-    map_numbers = map(int, numbers_list)
-    return sum(map_numbers)
-    #numbers = []
-    # for char in string:
+    if string == "":
+        return 0
+    numbers = string.split(",")
+    #map_numbers = map(int, numbers)
+    #return sum(map_numbers)
+    num = []
+    for char in numbers:
+        num.append(int(char))
     #     if char.isdigit():
     #         numbers.append(int(char))
     # return sum(numbers)
+    return sum(num)
+
+
 
 
 
