@@ -37,3 +37,7 @@ def test_add_with_delimiter():
 def test_different_delimiter():
     result = add("//,\n1,3,4")
     assert result == 8
+
+def test_negatives_not_allowed():
+    result = add("//,\n-1,3,4")
+    assert result == "Negatives not allowed: -1"

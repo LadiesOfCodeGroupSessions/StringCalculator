@@ -21,6 +21,11 @@ def find_delimiter(string):
     end_delimeter = string[3]
     return delimiter
 
+def find_negative_number(string):
+    #negative_number =
+    for char in string:
+        if char == "-":
+            print('Negatives not allowed')
 
 
 
