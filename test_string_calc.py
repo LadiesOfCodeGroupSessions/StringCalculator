@@ -33,3 +33,7 @@ def test_add_numbers_on_new_lines():
 def test_add_with_delimiter():
     result = add("//;\n1;2")
     assert result == 3
+
+def test_different_delimiter():
+    result = add("//,\n1,3,4")
+    assert result == 8
