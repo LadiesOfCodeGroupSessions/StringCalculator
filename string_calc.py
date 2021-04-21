@@ -22,10 +22,12 @@ def find_delimiter(string):
     return delimiter
 
 def find_negative_number(string):
-    #negative_number =
+    negative_number = " "
     for char in string:
-        if char == "-":
-            print('Negatives not allowed')
+        if char == :
+            char.join(negative_number)
+            print(f"Negatives not allowed{negative_number}")
+            return negative_number
 
 
 
