@@ -46,3 +46,7 @@ def test_for_negative_numbers():
 def test_message_negative_numbers():
     result = add("//,\n1,-3,4")
     assert result == 'Negatives not allowed: -3'
+
+def test_message_multiple_negative_numbers():
+    result = add("//,\n1,-3,-4,-5")
+    assert result == 'Negatives not allowed: -3,-4,-5'

@@ -16,9 +16,7 @@ def add(string):
     # numbers_list = [-1, 2, 3]
     negative_numbers_list = find_negative_numbers(numbers_list)
     if len(negative_numbers_list) > 0:
-        negative_numbers_string = ""
-        for number in negative_numbers_list:
-            negative_numbers_string += str(number)
+        negative_numbers_string = format_negative_numbers(negative_numbers_list)
         message = "Negatives not allowed: " + negative_numbers_string
         return message
     return sum(numbers_list)
@@ -37,6 +35,12 @@ def find_negative_numbers(numbers_list):
             negative_numbers.append(num)
     return negative_numbers
 
+def format_negative_numbers(negative_numbers_list):
+    negative_numbers_string = []
+    for num in negative_numbers_list:
+        negative_numbers_list.append(str(num))
+    negative_numbers_string = ",".join(negative_numbers_string)
+    return negative_numbers_string
 
 
 
