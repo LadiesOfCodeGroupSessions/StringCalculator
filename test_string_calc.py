@@ -42,3 +42,7 @@ def test_different_delimiter():
 def test_for_negative_numbers():
     result = find_negative_numbers([-1,3,4])
     assert result == [-1]
+
+def test_message_negative_numbers():
+    result = add("//,\n1,-3,4")
+    assert result == 'Negatives not allowed: -3'
