@@ -9,10 +9,10 @@ def add(string):
         numbers = string.replace(delimiter,' ').split()
     else:
         numbers = string.replace("\n", " ").replace(",", " ").split()
-    num = []
+    numbers_list = []
     for char in numbers:
-        num.append(int(char))
-    return sum(num)
+        numbers_list.append(int(char))
+    return sum(numbers_list)
 
 
 def find_delimiter(string):
@@ -21,14 +21,12 @@ def find_delimiter(string):
     end_delimeter = string[3]
     return delimiter
 
-def find_negative_number(string):
-    negative_num = []
-    for i in range(len(string)):
-        if string[i] == "-":
-            negative_num.append(string[i+1])
-    return list(map(int,negative_num))
-print(f"Negatives not allowed:" +{str(negative_num)})
-
+def find_negative_numbers(numbers_list):
+    negative_numbers = []
+    for num in numbers_list:
+        if num <0:
+            negative_numbers.append(num)
+    return negative_numbers
 
 
 

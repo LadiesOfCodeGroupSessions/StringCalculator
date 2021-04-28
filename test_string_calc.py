@@ -1,4 +1,5 @@
 from string_calc import add
+from string_calc import find_negative_numbers
 import random
 
 
@@ -38,6 +39,6 @@ def test_different_delimiter():
     result = add("//,\n1,3,4")
     assert result == 8
 
-def test_negatives_not_allowed():
-    result = add("//,\n-1,3,4")
-    assert result == "Negatives not allowed: -1"
+def test_for_negative_numbers():
+    result = find_negative_numbers([-1,3,4])
+    assert result == [-1]
