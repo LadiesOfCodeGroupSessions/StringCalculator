@@ -37,6 +37,8 @@ def find_negative_numbers(numbers_list):
 
 def format_negative_numbers(negative_numbers_list):
     negative_numbers_string = []
+    negative_numbers_list = negative_numbers_list * -1 ### added to stop for loop starting with negative numbers
+    ## This loop is the problem
     for num in negative_numbers_list:
         negative_numbers_list.append(str(num))
     negative_numbers_string = ",".join(negative_numbers_string)

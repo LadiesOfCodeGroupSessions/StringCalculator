@@ -13,7 +13,6 @@ def test_add_number_one():
     result = add('1')
     assert result == 1
 
-
 def test_add_two_numbers():
     result = add('1,2')
     assert result == 3
@@ -29,7 +28,6 @@ def test_add_multiple_digit_numbers():
 def test_add_numbers_on_new_lines():
     result = add('1\n2,3')
     assert result == 6
-
 
 def test_add_with_delimiter():
     result = add("//;\n1;2")
