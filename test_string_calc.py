@@ -1,6 +1,6 @@
 from string_calc import add
 from string_calc import find_negative_numbers
-import random
+
 
 
 
@@ -41,10 +41,14 @@ def test_for_negative_numbers():
     result = find_negative_numbers([-1,3,4])
     assert result == [-1]
 
-def test_message_negative_numbers():
-    result = add("//,\n1,-3,4")
-    assert result == 'Negatives not allowed: -3'
+#def test_message_negative_numbers():
+   # result = add("//,\n1,-3,4")
+    #assert result == 'Negatives not allowed: -3'
 
-def test_message_multiple_negative_numbers():
-    result = add("//,\n1,-3,-4,-5")
-    assert result == 'Negatives not allowed: -3,-4,-5'
+#def test_message_multiple_negative_numbers():
+    #result = add("//,\n1,-3,-4,-5")
+   # assert result == 'Negatives not allowed: -3,-4,-5'
+
+def test_find_negative_numbers():
+    result = find_negative_numbers([-1,3,4])
+    assert result == [-1]
