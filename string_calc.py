@@ -9,17 +9,11 @@ def add(string):
         numbers = string.replace(delimiter,' ').split()
     else:
         numbers = string.replace("\n", " ").replace(",", " ").split()
-    # numbers = ["-1", "2", "3"]    
+    # numbers = ["-1", "2", "3"]
     numbers_list = []
     for char in numbers:
         numbers_list.append(int(char))
     # numbers_list = [-1, 2, 3]
-    negative_numbers_list = find_negative_numbers(numbers_list)
-    print(negative_numbers_list)
-    if len(negative_numbers_list) != 0:
-        negative_numbers_string = format_negative_numbers(negative_numbers_list)
-        message = f"Negatives not allowed {negative_numbers_string} " 
-        return message
     return sum(numbers_list)
 
 
@@ -36,12 +30,7 @@ def find_negative_numbers(numbers_list):
             negative_numbers.append(num)
     return negative_numbers
 
-def format_negative_numbers(negative_numbers_list):
-    negative_numbers_string = []
-    negative_numbers_list = negative_numbers_list * -1 ### added to stop for loop starting with negative numbers
-    ## This loop is the problem
-    negative_numbers_string = ",".join([str(num) for elem in negative_numbers_list])
-    return negative_numbers_string
+
 
 
 
