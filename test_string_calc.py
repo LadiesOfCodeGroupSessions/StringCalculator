@@ -1,8 +1,6 @@
-from string_calc import add
-from string_calc import find_negative_numbers
+from main_calc import add
 
-
-
+result = add("-4,2zzz,#\n3,3,5")
 
 def test_add_empty_string():
     result = add('')
@@ -37,18 +35,33 @@ def test_different_delimiter():
     result = add("//,\n1,3,4")
     assert result == 8
 
-def test_for_negative_numbers():
-    result = find_negative_numbers([-1,3,4])
-    assert result == [-1]
+def test_negatives_not_allowed():
+    result = add("-4,2")
+    assert result == "Negatives not allowed: -4"
 
-#def test_message_negative_numbers():
-   # result = add("//,\n1,-3,4")
-    #assert result == 'Negatives not allowed: -3'
 
-#def test_message_multiple_negative_numbers():
-    #result = add("//,\n1,-3,-4,-5")
-   # assert result == 'Negatives not allowed: -3,-4,-5'
 
-def test_find_negative_numbers():
-    result = find_negative_numbers([-1,3,4])
-    assert result == [-1]
+def test_message_negative_numbers():
+    result = add("//,\n1,-3,4")
+    assert result == "Negatives not allowed: -3"
+
+def test_message_multiple_negative_numbers():
+   result = add("//,\n1,-3,-4,-5")
+   assert result == 'Negatives not allowed: -3, -4, -5'
+
+
+def test_num_greater_than_1000():
+   result = add("1001,2")
+   assert result == 2
+
+def test_different_delimiter2():
+    result = add("//[|||]\n1|||2|||3")
+    assert result == 6
+
+def test_different_delimiter3():
+    result = add("//[|][%]\n1|2%3")
+    assert result == 6
+
+def test_different_delimiter4():
+    result = add("//[|][%]l;kjfdgkl;uasfdkgnf;kjghuifdhgjhadlkfjghjkhadlkfjhlkjhfdalkjhgakdljhfgkljahfgklajhfdglkjafhgkljadhgalkjhfgklajhfg£$%£$$%$£%£%$%%%%%%\n1|2%3")
+    assert result == 6
